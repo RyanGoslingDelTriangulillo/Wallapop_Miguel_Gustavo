@@ -24,7 +24,6 @@ class UsuarioDAO
         $poblacion = $u->getPoblacion();
 
         $stmt->bind_param('sssis', $email, $password, $nombre, $telefono, $poblacion);
-        $stmt->execute();
     }
 
     public function obtenerPorEmail($email){
