@@ -61,7 +61,7 @@
             </div>
             <div class="row tm-mb-90">            
                 <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                    <img src="../../img/img-01-big.jpg" alt="Image" class="img-fluid">
+                    <img src="web/img/<?= $anuncio->getImagen();?>" alt="Image" class="img-fluid">
                 </div>
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                     <div class="tm-bg-gray tm-video-details">
