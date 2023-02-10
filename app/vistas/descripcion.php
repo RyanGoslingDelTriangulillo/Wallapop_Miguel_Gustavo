@@ -7,9 +7,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Descripción del anuncio</title>
-        <link rel="stylesheet" href="../../web/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../web/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="../../web/css/templatemo-style.css">
+        <link rel="stylesheet" href="web/css/bootstrap.min.css">
+        <link rel="stylesheet" href="web/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="web/css/templatemo-style.css">
         <!--
             
         TemplateMo 556 Catalog-Z
