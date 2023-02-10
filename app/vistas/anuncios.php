@@ -68,7 +68,7 @@ $array_anuncios = $anuncioDAO->getAnuncios();
         <div class="container-fluid tm-container-content tm-mt-60">
             <div class="row mb-4">
                 <h2 class="col-6 tm-text-primary">
-                    Últimos anuncios
+                    Primeros anuncios
                 </h2>
 
             </div>
