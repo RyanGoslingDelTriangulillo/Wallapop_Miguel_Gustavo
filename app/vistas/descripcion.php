@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -79,15 +82,15 @@
                         <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
                             <div class="form-group">
                                 <h3 class="tm-text-gray-dark mb-3">Titulo</h3>
-                                <p> Titulo del anuncio</p>
+                                <p><?= $anuncio->getTitulo(); ?></p>
                             </div>
                             <div class="form-group">
                                 <h3 class="tm-text-gray-dark mb-3">Precio</h3>
-                                <p> Precio del anuncio</p>
+                                <p> <?= $anuncio->getPrecio() ?></p>
                             </div>
                             <div class="form-group">
                                 <h3 class="tm-text-gray-dark mb-3">Descripcion</h3>
-                                <p> Descripcion del anuncio</p>
+                                <p> <?= $anuncio->getDescripcion() ?> </p>
                             </div>
 
                             <div class="form-group tm-text-right">
@@ -248,7 +251,7 @@
             </div>
         </footer>
 
-        <script src="../../web/js/plugins.js"></script>
+        <script src="web/js/plugins.js"></script>
         <script>
             $(window).on("load", function () {
                 $('body').addClass('loaded');
