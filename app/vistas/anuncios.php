@@ -1,6 +1,14 @@
 <?php 
 //El código html no se envía al cliente, sino que se guarda en memoria
 ob_start();
+
+
+
+// crea una instancia de la clase AnuncioDAO
+$anuncioDAO = new AnuncioDAO(ConexionBD::conectar());
+
+// llama al método getAnuncios() a través de la instancia
+$array_anuncios = $anuncioDAO->getAnuncios();
 ?>  
 
 <!DOCTYPE html>
@@ -9,9 +17,9 @@ ob_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Catalog-Z Bootstrap 5.0 HTML Template</title>
-        <link rel="stylesheet" href="../../web/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../web/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="../../web/css/templatemo-style.css">
+        <link rel="stylesheet" href="web/css/bootstrap.min.css">
+        <link rel="stylesheet" href="web/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="web/css/templatemo-style.css">
         
     </head>
     <body>
@@ -38,10 +46,10 @@ ob_start();
                             <a class="nav-link nav-link-1 active" aria-current="page" href="app/vistas/anuncios.php">Anuncios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-2" href="subirAnuncio.php">Anuncios</a>
+                            <a class="nav-link nav-link-2" href="app/vistas/subirAnuncio.php">Mis Anuncios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-3" href="registro.php">Login/Registro</a>
+                            <a class="nav-link nav-link-3" href="app/vistas/registro.php">Login/Registro</a>
                         </li>
                     </ul>
                 </div>
@@ -66,26 +74,27 @@ ob_start();
             </div>
             <div class="row tm-mb-90 tm-gallery">
                 <!-- Bucle escribe anuncios en lan vista -->
-                 <?php foreach ($anuncios as $anuncio): ?>
+                 <?php foreach ($array_anuncios as $anuncio): ?>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                     <figure class="effect-ming tm-video-item">
-                        <img src="../../web/img/img-03.jpg" alt="Image" class="img-fluid">
+                        <img src="web/img/<?= $anuncio->getImagen()?>" alt="Image" class="img-fluid">
                         <figcaption class="d-flex align-items-center justify-content-center">
-                            <h2><?php echo $anuncio['titulo']; ?></h2>
+                            <h2><?= $anuncio->getTitulo() ?></h2>
                             <a href="photo-detail.html">View more</a>
                         </figcaption>                    
                     </figure>
                     <div class="d-flex justify-content-between tm-text-gray">
-                        <span class="tm-text-gray-light"><?php echo $anuncio['fecha']; ?></span>
-                        <span><?php echo $anuncio['precio']; ?> €</span>
+                        <span class="tm-text-gray-light"><?= $anuncio->getFecha() ?></span>
+                        <span><?= $anuncio->getPrecio() ?>.00 €</span>
 
                     </div>
-                    <p><?php echo $anuncio['descripcion']; ?></p>
+                    <p><?= $anuncio->getDescripcion() ?></p>
                 </div>
                 <?php endforeach; ?>
                 <!--Fin del bucle -->
                 
                 <!--CONTENEDOR DE EJEMPLO-->
+                <!--
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                     <figure class="effect-ming tm-video-item">
                         <img src="../../web/img/img-03.jpg" alt="Image" class="img-fluid">
@@ -155,7 +164,7 @@ ob_start();
             </div>
         </footer>
 
-        <script src="../../web/js/plugins.js"></script>
+        <script src="web/js/plugins.js"></script>
         <script>
             $(window).on("load", function () {
                 $('body').addClass('loaded');

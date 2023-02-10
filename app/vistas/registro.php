@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog-Z Contact page</title>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../../css/templatemo-style.css">
+    <link rel="stylesheet" href="../../web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../web/css/templatemo-style.css">
 <!--
     
 TemplateMo 556 Catalog-Z
@@ -55,7 +55,7 @@ https://templatemo.com/tm-556-catalog-z
         <div class="row tm-mb-50">
             <div class="col-lg-4 col-12 mb-5">
                 <h2 class="tm-text-primary mb-5">Registrate</h2>
-                <form id="contact-form" action="index.php?action=regsitro" method="POST" class="tm-contact-form mx-auto">
+                <form id="contact-form" action="../../index.php?action=registro" method="POST" class="tm-contact-form mx-auto">
                     <div class="form-group">
                         <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required />
                     </div>
@@ -80,7 +80,7 @@ https://templatemo.com/tm-556-catalog-z
                     </div>
 
                     <div class="form-group tm-text-right">
-                        <button type="submit" value="resgitro" class="btn btn-primary">Registrarse</button>
+                        <button type="submit" value="registro" class="btn btn-primary">Registrarse</button>
                         <a href="login.php" style="color: #009999;">¿Tienes cuenta?, inicia sesión</a>
                     </div>
                 </form>                
@@ -157,7 +157,7 @@ https://templatemo.com/tm-556-catalog-z
             </div>
         </div>
     </footer>    
-    <script src="../../js/plugins.js"></script>
+    <script src="../../web/js/plugins.js"></script>
     <script>
         $(window).on("load", function() {
             $('body').addClass('loaded');

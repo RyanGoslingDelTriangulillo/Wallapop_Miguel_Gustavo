@@ -1,5 +1,4 @@
 <?php 
-
 class Usuario {
     private $id;
     private $email;
@@ -7,6 +6,7 @@ class Usuario {
     private $nombre;
     private $telefono;
     private $poblacion;
+    private $uid;
 
 
 	/**
@@ -104,6 +104,16 @@ class Usuario {
 		$this->poblacion = $poblacion;
 		return $this;
 	}
+        
+        public function getUid() {
+            return $this->uid;
+        }
+
+        public function setUid($uid): void {
+            $this->uid = $uid;
+        }
+
+
 }
 
 

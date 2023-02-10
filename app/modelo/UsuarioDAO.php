@@ -22,8 +22,8 @@ class UsuarioDAO
         $nombre = $u->getNombre();
         $telefono = $u->getTelefono();
         $poblacion = $u->getPoblacion();
-
-        $stmt->bind_param('sssis', $email, $password, $nombre, $telefono, $poblacion);
+        
+        $stmt->bind_param('sssss', $email, $password, $nombre, $telefono, $poblacion);
         $stmt->execute();
     }
 
@@ -42,19 +42,4 @@ class UsuarioDAO
         return $usuario;
 
     }
-    
-    public function actualizar(Usuario $u) {
-        $sql = "UPDATE usuarios SET email = ? , foto = ?, uid = ? "
-                . "WHERE id = ?";
-        if (!$stmt = $this->conn->prepare($sql)) {
-            die("Error al preparar la sentencia: " . $this->conn->error);
-        }
-        $id = $u->getId();
-        $email = $u->getEmail();
-        $foto = $u->getFoto();
-        $uid = $u->getUid();
-        $stmt->bind_param('sssi', $email, $foto, $uid, $id);
-        $stmt->execute();
-    }
-
 }

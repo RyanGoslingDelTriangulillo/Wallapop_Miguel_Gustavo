@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog-Z Contact page</title>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../../css/templatemo-style.css">
+    <link rel="stylesheet" href="../../web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../web/css/templatemo-style.css">
 <!--
     
 TemplateMo 556 Catalog-Z
@@ -140,7 +140,7 @@ https://templatemo.com/tm-556-catalog-z
             </div>
         </div>
     </footer>    
-    <script src="../../js/plugins.js"></script>
+    <script src="../../web/js/plugins.js"></script>
     <script>
         $(window).on("load", function() {
             $('body').addClass('loaded');

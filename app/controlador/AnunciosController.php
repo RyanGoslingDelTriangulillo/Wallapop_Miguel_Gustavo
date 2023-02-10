@@ -7,6 +7,7 @@
 require 'app/modelo/Anuncio.php';
 require 'app/modelo/AnuncioDAO.php';
 require_once 'app/modelo/ConexionBD.php';
+
 /**
  * Description of AnunciosController
  *
@@ -14,11 +15,18 @@ require_once 'app/modelo/ConexionBD.php';
  */
 class AnunciosController {
     function inicio() {
+        
         $anuncioDAO = new AnuncioDAO(ConexionBD::conectar());
+        
+
         //Obtengo todos los mensajes de la BD
-        $anuncios = $anuncioDAO->obtenerTodos();
+        $array_anuncios = $anuncioDAO->getAnuncios();
+        
         //incluimos la vista
         require 'app/vistas/anuncios.php';
+        
     }
-
+    
+    
+    
 }
