@@ -36,7 +36,7 @@ class AnunciosController {
         $anuncio = $anuncioDAO->getAnunciosIdAnuncio($idAnuncio);
         
         //incluimos la vista
-        require 'descripcion.php';
+        require 'app/vistas/descripcion.php';
         
         
     }
