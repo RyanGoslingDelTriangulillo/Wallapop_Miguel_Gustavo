@@ -80,7 +80,7 @@ $array_anuncios = $anuncioDAO->getAnuncios();
                         <img src="web/img/<?= $anuncio->getImagen()?>" alt="Image" class="img-fluid">
                         <figcaption class="d-flex align-items-center justify-content-center">
                             <h2><?= $anuncio->getTitulo() ?></h2>
-                            <a href="photo-detail.html">View more</a>
+                            <a href="descripcion.php">View more</a>
                         </figcaption>                    
                     </figure>
                     <div class="d-flex justify-content-between tm-text-gray">
