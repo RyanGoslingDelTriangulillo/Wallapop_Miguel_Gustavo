@@ -38,7 +38,7 @@ ob_start();
                             <a class="nav-link nav-link-1 active" aria-current="page" href="app/vistas/anuncios.php">Anuncios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-2" href="subirAnuncio.php">Mis Anuncios</a>
+                            <a class="nav-link nav-link-2" href="subirAnuncio.php">Anuncios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-link-3" href="registro.php">Login/Registro</a>
